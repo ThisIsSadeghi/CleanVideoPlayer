@@ -1,4 +1,4 @@
-package com.sadeghirad.cleanvideoplayer
+package com.thisissadeghi.player.data
 
 import org.junit.Test
 

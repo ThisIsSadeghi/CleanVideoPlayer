@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.sadeghirad.cleanvideoplayer"
+        applicationId "com.thisissadeghi.player"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
