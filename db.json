@@ -1,0 +1,71 @@
+{
+  "contents": [
+    {
+      "id": 1,
+      "title": "Skate Phantom 4k",
+      "url": "http://sample.vodobox.com/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8"
+    },
+    {
+      "id": 2,
+      "title": "Planete Interdite",
+      "url": "http://sample.vodobox.com/planete_interdite_hevc/planete_interdite_hevc.m3u8"
+    },
+    {
+      "id": 3,
+      "title": "Pipe Dream Tahiti",
+      "url": "http://sample.vodobox.com/pipe_dream_tahiti/pipe_dream_tahiti.m3u8"
+    },
+    {
+      "id": 4,
+      "title": "We Are Blood 4k",
+      "url": "http://sample.vodobox.com/we_are_blood_4k/we_are_blood_4k.m3u8"
+    },
+    {
+      "id": 5,
+      "title": "Caminande 2k",
+      "url": "http://sample.vodobox.com/caminandes_3_2k/caminandes_3_2k.m3u8"
+    },
+    {
+      "id": 6,
+      "title": "Caminandes 4k",
+      "url": "http://sample.vodobox.com/caminandes_1_4k/caminandes_1_4k.m3u8"
+    },
+    {
+      "id": 7,
+      "title": "Big Buck Bunny",
+      "url": "http://sample.vodobox.com/big_buck_bunny_4k/big_buck_bunny_4k.m3u8"
+    },
+    {
+      "id": 8,
+      "title": "Oceans",
+      "url": "http://playertest.longtailvideo.com/adaptive/oceans_aes/oceans_aes.m3u8"
+    },
+    {
+      "id": 9,
+      "title": "Playlist",
+      "url": "http://playertest.longtailvideo.com/adaptive/captions/playlist.m3u8"
+    },
+    {
+      "id": 10,
+      "title": "Livestream Metadata",
+      "url": "http://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8"
+    },
+    {
+      "id": 11,
+      "title": "Tears of Steel 4k",
+      "url": "http://content.jwplatform.com/manifests/vM7nH0Kl.m3u8"
+    },
+    {
+      "id": 12,
+      "title": "Artbeats",
+      "url": "http://cdn-fms.rbs.com.br/hls-vod/sample1_1500kbps.f4v.m3u8"
+    }
+  ],
+  "info": {
+    "projectName": "CleanVideoPlayer",
+    "developer": "ThisIsSadeghi",
+    "projectUrl": "https://github.com/ThisIsSadeghi/CleanVideoPlayer",
+    "projectVersion": "0.0.1",
+    "email": "alisadeghi.dev@gmail.com"
+  }
+}
