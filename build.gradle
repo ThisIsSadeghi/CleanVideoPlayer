@@ -24,3 +24,39 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+ext {
+
+    //region versions
+
+    //Sdk and tools
+    minSdkVersion = 21
+    targetSdkVersion = 30
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.2"
+
+    versionCode = 1
+    versionName = "0.0.1"
+
+    //Kotlin
+    kotlinCoreVersion = "1.3.2"
+
+    //Hilt
+    hiltVersion = "2.32-alpha"
+
+    //Networking
+    retrofitVersion = "2.9.0"
+    okhttpVersion = "4.8.1"
+
+    //Moshi
+    moshiVersion = "1.9.3"
+
+    //Coroutines
+    coroutinesVersion = "1.4.2"
+
+    //Inject
+    injectVersion = "1"
+
+    //endregion
+}
