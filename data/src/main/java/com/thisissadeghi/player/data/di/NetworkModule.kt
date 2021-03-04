@@ -26,7 +26,7 @@ import javax.inject.Singleton
 class NetworkModule {
 
     private val TIME_OUT = 60L
-
+    private val BASE_URL = "https://my-json-server.typicode.com/ThisIsSadeghi/CleanVideoPlayer/"
 
     @Provides
     @Singleton
@@ -35,7 +35,7 @@ class NetworkModule {
         okHttpClient: OkHttpClient
     ): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl(BASE_URL)
             .addConverterFactory(moshiConverterFactory)
             .client(okHttpClient)
             .build()
