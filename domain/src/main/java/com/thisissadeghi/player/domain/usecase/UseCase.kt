@@ -17,6 +17,6 @@ interface UseCase<in param, out T : Any> {
      * @param param The input of the useCase
      * @return T The result of the useCase
      */
-    suspend fun invoke(param: param): T
+    suspend fun invoke(param: param? = null): T
 
 }

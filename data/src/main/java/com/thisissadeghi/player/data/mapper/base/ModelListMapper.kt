@@ -8,7 +8,7 @@ import javax.inject.Inject
  * Created by Ali Sadeghi
  * on 04,Mar,2021
  */
-class ModelListMapper<in I : Model, out O : Entity> @Inject constructor(
+open class ModelListMapper<in I : Model, out O : Entity> @Inject constructor(
     private val mapper: ModelMapper<I, O>
 ) : ListMapper<I, O> {
 
