@@ -10,5 +10,6 @@ import com.thisissadeghi.player.domain.model.video.Video
 interface VideoRepository {
 
     suspend fun getVideos(): UseCaseResult<List<Video>>
-    
+
+    suspend fun getVideoDetails(videoId : Int) : UseCaseResult<Video>
 }

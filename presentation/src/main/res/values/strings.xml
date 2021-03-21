@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">CleanVideoPlayer</string>
+    <string name="unknown_error">Unknown error</string>
 </resources>

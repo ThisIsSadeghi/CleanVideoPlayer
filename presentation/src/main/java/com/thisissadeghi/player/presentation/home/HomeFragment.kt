@@ -1,9 +1,9 @@
 package com.thisissadeghi.player.presentation.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.thisissadeghi.player.databinding.FragmentHomeBinding
 import com.thisissadeghi.player.presentation.base.BaseFragment
@@ -16,7 +16,11 @@ class HomeFragment : BaseFragment<HomeViewModel, FragmentHomeBinding>() {
 
     private val videosAdapter: VideosAdapter by lazy {
         VideosAdapter { video ->
-            Log.d(TAG, video.toString())
+            findNavController().navigate(
+                HomeFragmentDirections.actionHomeFragmentToDetailFragment(
+                    video.id
+                )
+            )
         }
     }
 

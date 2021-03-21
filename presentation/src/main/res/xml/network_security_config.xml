@@ -2,5 +2,8 @@
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">typicode.com</domain>
+        <domain includeSubdomains="true">vodobox.com</domain>
+        <domain includeSubdomains="true">longtailvideo.com</domain>
+        <domain includeSubdomains="true">jwplatform.com</domain>
     </domain-config>
 </network-security-config>

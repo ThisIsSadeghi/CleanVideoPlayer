@@ -18,4 +18,10 @@ class VideoRepositoryImpl @Inject constructor(private val videoRemoteDataSource:
             videoRemoteDataSource.getVideos()
         }
     }
+
+    override suspend fun getVideoDetails(videoId: Int): UseCaseResult<Video> {
+        return runCommand {
+            videoRemoteDataSource.getVideoDetails(videoId)
+        }
+    }
 }

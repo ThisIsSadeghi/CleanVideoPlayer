@@ -30,7 +30,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -66,6 +66,10 @@ dependencies {
     //Navigation component
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    //Exo
+    implementation "com.google.android.exoplayer:exoplayer:$exoVersion"
+
 
     //Data layer
     api project(":data")

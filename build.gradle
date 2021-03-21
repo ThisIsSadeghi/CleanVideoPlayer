@@ -30,7 +30,6 @@ task clean(type: Delete) {
 
 
 ext {
-
     //region versions
 
     //Sdk and tools
@@ -74,6 +73,7 @@ ext {
     //Inject
     injectVersion = "1"
 
-
+    //Exo
+    exoVersion = "2.13.2"
     //endregion
 }
