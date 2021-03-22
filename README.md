@@ -6,9 +6,9 @@ Currently, the app has only two fragments. The first one shows a list of videos,
 
 ### Project flow
 
-<div align="center">
-![Project arc](images/project_arc.png)
-</div>
+<p align="center">
+  <img src=images/project_arc.png>
+</p>
 
 One thing that is not mentions in the image is that we call domain-layer-models `Entity` and data-layer-models `Model`, and these two layers communicate with each other using mappers defined in the data layer.
 
