@@ -73,4 +73,7 @@ dependencies {
 
     //Data layer
     api project(":data")
+
+    //Android core
+    api project(":androidcore")
 }
