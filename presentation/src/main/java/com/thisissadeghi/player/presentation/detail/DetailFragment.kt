@@ -1,13 +1,7 @@
 package com.thisissadeghi.player.presentation.detail
 
-import android.content.pm.ActivityInfo
-import android.content.res.Configuration
-import android.os.Build
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
-import android.view.WindowInsets
-import android.view.WindowInsetsController
 import android.widget.ImageButton
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
@@ -16,12 +10,10 @@ import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
-import com.sadeghirad.androidcore.ext.dp
+import com.sadeghirad.androidcore.ext.*
 import com.thisissadeghi.player.R
 import com.thisissadeghi.player.databinding.FragmentDetailBinding
 import com.thisissadeghi.player.presentation.base.BaseFragment
-import com.sadeghirad.androidcore.ext.makeGone
-import com.sadeghirad.androidcore.ext.makeVisible
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -108,72 +100,23 @@ class DetailFragment : BaseFragment<DetailViewModel, FragmentDetailBinding>() {
     }
 
     private fun handleFullScreenClicked() {
-        val isPortrait =
-            activity?.resources?.configuration?.orientation == Configuration.ORIENTATION_PORTRAIT
-
-        if (isPortrait) {
+        if (isPortrait()) {
             hideSystemUI()
-
-            activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            rotateScreenToLandscape()
 
             binding?.player?.let { player ->
                 player.resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FILL
-                player.layoutParams.apply {
-                    height = ViewGroup.LayoutParams.MATCH_PARENT
-                    width = ViewGroup.LayoutParams.MATCH_PARENT
-                }.also {
-                    player.layoutParams = it
-                }
-
+                player.makeHeightAndWidthMatchParent()
             }
         } else {
             showSystemUI()
-
-            activity?.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            rotateScreenToPortrait()
 
             binding?.player?.let { player ->
                 player.resizeMode = AspectRatioFrameLayout.RESIZE_MODE_FIT
-                player.layoutParams.apply {
-                    height = 200.dp()
-                    width = ViewGroup.LayoutParams.MATCH_PARENT
-                }.also {
-                    player.layoutParams = it
-                }
-
+                player.setHeightDP(200)
             }
         }
     }
 
-    private fun hideSystemUI() {
-
-        requireActivity().window?.let { window ->
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                window.setDecorFitsSystemWindows(false)
-                window.insetsController?.let { insetsController ->
-                    insetsController.hide(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
-                    insetsController.systemBarsBehavior =
-                        WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-                }
-            } else {
-                @Suppress("DEPRECATION")
-                window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
-            }
-        }
-    }
-
-    private fun showSystemUI() {
-        requireActivity().window?.let { window ->
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                window.setDecorFitsSystemWindows(true)
-                window.insetsController?.show(WindowInsets.Type.statusBars() or WindowInsets.Type.navigationBars())
-            } else {
-                @Suppress("DEPRECATION")
-                requireActivity().window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
-            }
-        }
-    }
 }
