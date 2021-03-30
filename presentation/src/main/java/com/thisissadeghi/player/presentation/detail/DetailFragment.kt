@@ -16,10 +16,10 @@ import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
+import com.sadeghirad.androidcore.ext.dp
 import com.thisissadeghi.player.R
 import com.thisissadeghi.player.databinding.FragmentDetailBinding
 import com.thisissadeghi.player.presentation.base.BaseFragment
-import com.thisissadeghi.player.presentation.util.ext.dp
 import com.sadeghirad.androidcore.ext.makeGone
 import com.sadeghirad.androidcore.ext.makeVisible
 import dagger.hilt.android.AndroidEntryPoint

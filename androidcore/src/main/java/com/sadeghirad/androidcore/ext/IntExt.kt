@@ -1,4 +1,4 @@
-package com.thisissadeghi.player.presentation.util.ext
+package com.sadeghirad.androidcore.ext
 
 import android.content.res.Resources
 
