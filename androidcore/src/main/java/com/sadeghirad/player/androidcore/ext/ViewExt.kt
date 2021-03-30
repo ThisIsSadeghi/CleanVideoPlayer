@@ -1,4 +1,4 @@
-package com.thisissadeghi.player.presentation.util.ext
+package com.sadeghirad.player.androidcore.ext
 
 import android.view.View
 
