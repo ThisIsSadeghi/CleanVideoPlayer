@@ -15,4 +15,7 @@ dependencies {
 
     //Inject
     implementation "javax.inject:javax.inject:$injectVersion"
+
+    //core
+    api project(":core")
 }
