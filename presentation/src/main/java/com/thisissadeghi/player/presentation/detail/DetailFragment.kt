@@ -20,8 +20,8 @@ import com.thisissadeghi.player.R
 import com.thisissadeghi.player.databinding.FragmentDetailBinding
 import com.thisissadeghi.player.presentation.base.BaseFragment
 import com.thisissadeghi.player.presentation.util.ext.dp
-import com.sadeghirad.player.androidcore.ext.makeGone
-import com.sadeghirad.player.androidcore.ext.makeVisible
+import com.sadeghirad.androidcore.ext.makeGone
+import com.sadeghirad.androidcore.ext.makeVisible
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

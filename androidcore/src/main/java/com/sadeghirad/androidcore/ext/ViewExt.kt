@@ -1,4 +1,4 @@
-package com.sadeghirad.player.androidcore.ext
+package com.sadeghirad.androidcore.ext
 
 import android.view.View
 
